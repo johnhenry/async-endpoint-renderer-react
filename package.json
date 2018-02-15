@@ -1,0 +1,51 @@
+{
+  "name": "async-endpoint-renderer-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "docs": "jsdoc2md js/index.js > docs/api.md && cat docs/preamble.md docs/api.md > readme.md",
+    "type": "flow-remove-types --out-dir js/ flow/ --sourcemaps",
+    "flow": "flow",
+    "fix": "echo \"linting temporarliy disabled\" && : ",
+    "rollup": "rollup -c ./rollup.config-browser.js && rollup -c ./rollup.config-common.js"  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnhenry/async-endpoint-renderer-react"
+  },
+  "author": "john@iamjohnhenry.com",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.1.0",
+    "react-dom": "16.2.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "babel-plugin-async-import": "1.0.0-alpha.1",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-plugin-transform-async-generator-functions": "6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "6.23.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
+    "eslint": "4.11.0",
+    "eslint-plugin-flowtype": "2.39.1",
+    "flow-bin": "0.59.0",
+    "flow-remove-types": "1.2.3",
+    "git-hooks": "1.1.9",
+    "jsdoc-to-markdown": "3.0.1",
+    "rollup": "0.55.5",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-node-resolve": "3.0.2",
+    "tape": "github:johnhenry/tape#v4.9.0",
+    "babel-polyfill": "6.26.0",
+    "rollup-plugin-node-builtins": "2.1.2",
+    "rollup-plugin-prepack": "1.0.0",
+    "rollup-plugin-regenerator": "0.5.4",
+    "rollup-plugin-replace": "2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/johnhenry/async-endpoint-renderer-react/issues"
+  },
+  "devDependencies": {}
+}
