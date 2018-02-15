@@ -14,7 +14,7 @@ import * as ReactDOM from "react-dom";
  */
 
 /**
- * @function
+ * @function *
  * @description creates a render function that renders yeilded results from programs
  * to any number of target functions. If no targets are given, objects will be rendered
  * using "console.log"
@@ -25,12 +25,11 @@ import * as ReactDOM from "react-dom";
  * @return {RenderFunction}
  * @example
  * import * as React from "react";
- * import CreateReactRendererfrom from "async-endpoint-react-renderer";
+ * import CreateReactRenderer from "async-endpoint-react-renderer";
  * const renderer = CreateRenderer(({ data }) => <React.Fragment>{data}</React.Fragment>, document.getElementById("main"))
  * renderer({ data: "hello world" });
  * //writes "hello world" to dom
  */
-
 export default (Interface, target, respond) => data => {
   ReactDOM.render(
     React.createElement(Interface, Object.assign({}, data, { respond })),
