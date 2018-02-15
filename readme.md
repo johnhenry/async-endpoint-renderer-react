@@ -1,13 +1,8 @@
-# -> Asynchronous React Renderer## Functions
+# Asynchronous Endpoint React Renderer
 
-<dl>
-<dt><a href="#createRenderer">createRenderer([Interface], [target], [respond])</a> ⇒ <code><a href="#RenderFunction">RenderFunction</a></code></dt>
-<dd><p>creates a render function that renders yeilded results from programs
-to any number of target functions. If no targets are given, objects will be rendered
-using &quot;console.log&quot;
-Can be used as a &quot;passthrough&quot; (see &quot;createQueue&quot; example)</p>
-</dd>
-</dl>
+Asynchronous Endpoint React Renderer
+
+Use with [Async Endpoint](https://github.com/johnhenry/async-endpoint)
 
 ## Typedefs
 
@@ -20,30 +15,6 @@ Can be used as a &quot;passthrough&quot; (see &quot;createQueue&quot; example)</
 </dd>
 </dl>
 
-<a name="createRenderer"></a>
-
-## createRenderer([Interface], [target], [respond]) ⇒ [<code>RenderFunction</code>](#RenderFunction)
-creates a render function that renders yeilded results from programs
-to any number of target functions. If no targets are given, objects will be rendered
-using "console.log"
-Can be used as a "passthrough" (see "createQueue" example)
-
-**Kind**: global function  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [Interface] | <code>\*</code> | request function for input |
-| [target] | <code>\*</code> | dom element into which to render the |
-| [respond] | [<code>PairedRespond</code>](#PairedRespond) | optional respond function for input |
-
-**Example**  
-```js
-import * as React from "react";
-import CreateReactRendererfrom from "async-endpoint-react-renderer";
-const renderer = CreateRenderer(({ data }) => <React.Fragment>{data}</React.Fragment>, document.getElementById("main"))
-renderer({ data: "hello world" });
-//writes "hello world" to dom
-```
 <a name="RenderFunction"></a>
 
 ## RenderFunction : <code>function</code>

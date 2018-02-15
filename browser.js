@@ -785,7 +785,7 @@ if (process.env.NODE_ENV === 'production') {
  */
 
 /**
- * @function createRenderer
+ * @function
  * @description creates a render function that renders yeilded results from programs
  * to any number of target functions. If no targets are given, objects will be rendered
  * using "console.log"
